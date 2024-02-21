@@ -1,2 +1,22 @@
 server:
   port: 8091
+
+spring:
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/warehouses
+    username: root
+    password: mysql
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  pattern:
+    console: "%d{dd/MM/yyyy HH:mm:ss}: [%highlight(%thread)] %highlight(%-5level): %m%n" #%highlight(%logger{36})
